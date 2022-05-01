@@ -25,7 +25,7 @@ pub fn create_user(conn: &SqliteConnection, username: &str) -> Result<User> {
 }
 
 pub enum UserKey<'a> {
-    Username(:'a str),
+    Username(&'a str),
     ID(i32),
 }
 
